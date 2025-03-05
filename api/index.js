@@ -7,6 +7,7 @@ import userRouter from './routes/user.route.js'
 import categoryRouter from './routes/category.route.js'
 import productRouter from './routes/product.route.js'
 import orderRouter from './routes/order.route.js'
+import dotenv from 'dotenv'
 
 import cookieParser from 'cookie-parser'
 
@@ -14,6 +15,7 @@ import cookieParser from 'cookie-parser'
 const app = express()
 app.use(express.json())
 app.use(cookieParser())
+dotenv.config()
 // ---------database connection
 dbConnection;
 const port= 3000
